@@ -20,10 +20,10 @@ describe("Tests for UserView", () => {
     });
 
     test("Create a user by a given valid payload", () => {
-        const payload = {username: "username", id: 1, name: "name"}
+        const payload = {id: 1, username: "username", name: "name"}
         const result = UserView.createUser(payload)
-        expect(result.name).toBe("name")
-        expect(result.username).toBe("username")
         expect(result.id).toBe(1)
+        expect(result.username).toBe("username")
+        expect(result.name).toBe("name")
     });
 });
