@@ -11,6 +11,9 @@ class UserView {
         else if (Object.values(payload).length < 3) {
             return {error: "necesita más propiedades"}
         }
+        else {
+            return UserService.create(...Object.values(payload))
+        }
     }
 }
 
